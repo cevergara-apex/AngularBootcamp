@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  enableRedText : boolean = false;
   title = 'AngularBootCampHomework';
+
+  click() : void {
+   this.enableRedText = !this.enableRedText;
+  }
 }
