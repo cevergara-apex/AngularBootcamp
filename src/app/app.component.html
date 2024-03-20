@@ -4,6 +4,14 @@
   <div class="content">
       <p>This is project root.</p>
   </div>
+  <!--Excercise 1 -->
+  <span [ngClass]="enableRedText ? 'redText' : ''">Hello with ngClass</span>
+  <br>
+  <span [ngStyle]="{'color': enableRedText ? 'red' : 'black' }">Hello with ngStyle</span>
+  <br>
+  <br>
+  <button (click)="click()">Enable/Disable redText (ngClass)</button>
+  
 </main>
 
 <router-outlet />
