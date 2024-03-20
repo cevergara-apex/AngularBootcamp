@@ -4,6 +4,43 @@
   <div class="content">
       <p>This is project root.</p>
   </div>
+
+  <!--Exercise 2 -->
+  <p>ngFor</p>
+  <ul>
+    <li *ngFor="let item of arrayOfLetters; index as i;">{{item}}</li>
+  </ul>
+
+  <p>ngIf</p>
+  <ul>
+    <ng-container *ngFor="let item of arrayOfLetters">
+      <li *ngIf="item != 'B'">{{item}}</li>
+    </ng-container>
+  </ul>
+  <!-- Note: I found this other way of doing it using control flow from angular 17 :) -->
+  <!-- <ul>
+    @for(item of arrayOfLetters; track item){
+      @if(item != "B"){
+      <div>
+        <li>{{item}}</li>
+      </div>
+    }
+  }   
+  </ul> -->
+
+  <p>ngSwitch</p>
+  <ul>
+    <ng-container *ngFor="let item of arrayOfLetters">
+      <container-element [ngSwitch]="item">
+        <li *ngSwitchCase="'A'">1</li>
+        <li *ngSwitchCase="'B'">2</li>
+        <li *ngSwitchCase="'C'">3</li>
+     </container-element>
+    </ng-container>
+  </ul>
+
+  
+
 </main>
 
 <router-outlet />
