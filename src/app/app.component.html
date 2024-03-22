@@ -8,7 +8,7 @@
   <!--Exercise 2 -->
   <p>ngFor</p>
   <ul>
-    <li *ngFor="let item of arrayOfLetters; index as i;">{{item}}</li>
+    <li *ngFor="let item of arrayOfLetters;">{{item}}</li>
   </ul>
 
   <p>ngIf</p>
@@ -17,8 +17,10 @@
       <li *ngIf="item != 'B'">{{item}}</li>
     </ng-container>
   </ul>
+
   <!-- Note: I found this other way of doing it using control flow from angular 17 :) -->
-  <!-- <ul>
+  <p>ngfor and ngif with control flow syntax</p>
+  <ul>
     @for(item of arrayOfLetters; track item){
       @if(item != "B"){
       <div>
@@ -26,7 +28,7 @@
       </div>
     }
   }   
-  </ul> -->
+  </ul>
 
   <p>ngSwitch</p>
   <ul>
@@ -38,9 +40,6 @@
      </container-element>
     </ng-container>
   </ul>
-
-  
-
 </main>
 
 <router-outlet />
